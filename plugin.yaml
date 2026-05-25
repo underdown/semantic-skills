@@ -1,0 +1,9 @@
+name: semantic-skills
+version: 2.0.0
+description: "Semantic skill pre-loading — embeds user queries against a skill index and injects the top-match skill as ephemeral context. Keeps the system prompt at ~226 tokens regardless of skill count. Fully cache-friendly (injects into messages, not system prompt)."
+author: Ryan Underdown
+kind: standalone
+provides_hooks:
+  - pre_llm_call
+provides_tools:
+  - search_skills

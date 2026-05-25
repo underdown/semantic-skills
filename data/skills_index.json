@@ -1,0 +1,2372 @@
+[
+  {
+    "name": "apple-notes",
+    "description": "Manage Apple Notes via memo CLI: create, search, edit.",
+    "category": "apple",
+    "path": "/root/.hermes/skills/apple/apple-notes/SKILL.md"
+  },
+  {
+    "name": "apple-reminders",
+    "description": "Apple Reminders via remindctl: add, list, complete.",
+    "category": "apple",
+    "path": "/root/.hermes/skills/apple/apple-reminders/SKILL.md"
+  },
+  {
+    "name": "findmy",
+    "description": "Track Apple devices/AirTags via FindMy.app on macOS.",
+    "category": "apple",
+    "path": "/root/.hermes/skills/apple/findmy/SKILL.md"
+  },
+  {
+    "name": "imessage",
+    "description": "Send and receive iMessages/SMS via the imsg CLI on macOS.",
+    "category": "apple",
+    "path": "/root/.hermes/skills/apple/imessage/SKILL.md"
+  },
+  {
+    "name": "macos-computer-use",
+    "description": "|",
+    "category": "apple",
+    "path": "/root/.hermes/skills/apple/macos-computer-use/SKILL.md"
+  },
+  {
+    "name": "claude-code",
+    "description": "Delegate coding to Claude Code CLI (features, PRs).",
+    "category": "autonomous-ai-agents",
+    "path": "/root/.hermes/skills/autonomous-ai-agents/claude-code/SKILL.md"
+  },
+  {
+    "name": "codex",
+    "description": "Delegate coding to OpenAI Codex CLI (features, PRs).",
+    "category": "autonomous-ai-agents",
+    "path": "/root/.hermes/skills/autonomous-ai-agents/codex/SKILL.md"
+  },
+  {
+    "name": "hermes-agent",
+    "description": "Configure, extend, or contribute to Hermes Agent.",
+    "category": "autonomous-ai-agents",
+    "path": "/root/.hermes/skills/autonomous-ai-agents/hermes-agent/SKILL.md"
+  },
+  {
+    "name": "kanban-codex-lane",
+    "description": "Use when a Hermes Kanban worker wants to run Codex CLI as an isolated implementation lane while Hermes keeps ownership of task lifecycle, reconciliation, testing, and handoff.",
+    "category": "autonomous-ai-agents",
+    "path": "/root/.hermes/skills/autonomous-ai-agents/kanban-codex-lane/SKILL.md"
+  },
+  {
+    "name": "opencode",
+    "description": "Delegate coding to OpenCode CLI (features, PR review).",
+    "category": "autonomous-ai-agents",
+    "path": "/root/.hermes/skills/autonomous-ai-agents/opencode/SKILL.md"
+  },
+  {
+    "name": "evm",
+    "description": "Read-only EVM client: wallets, tokens, gas across 8 chains.",
+    "category": "blockchain",
+    "path": "/root/.hermes/skills/blockchain/evm/SKILL.md"
+  },
+  {
+    "name": "3-statement-model",
+    "description": "Build fully-integrated 3-statement models (IS, BS, CF) in Excel with working capital schedules, D&A roll-forwards, debt schedule, and the plugs that make cash and retained earnings tie. Pairs with excel-author.",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/3-statement-model/SKILL.md"
+  },
+  {
+    "name": "huggingface-accelerate",
+    "description": "Simplest distributed training API. 4 lines to add distributed support to any PyTorch script. Unified API for DeepSpeed/FSDP/Megatron/DDP. Automatic device placement, mixed precision (FP16/BF16/FP8). Interactive config, single launch command. HuggingFace ecosystem standard.",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/accelerate/SKILL.md"
+  },
+  {
+    "name": "add-to-cart",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/add-to-cart/SKILL.md"
+  },
+  {
+    "name": "adjust-copy-for-platforms",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/adjust-copy-for-platforms/SKILL.md"
+  },
+  {
+    "name": "aeo-report",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/aeo-report/SKILL.md"
+  },
+  {
+    "name": "agentmail",
+    "description": "Give the agent its own dedicated email inbox via AgentMail. Send, receive, and manage email autonomously using agent-owned email addresses (e.g. hermes-agent@agentmail.to).",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/agentmail/SKILL.md"
+  },
+  {
+    "name": "ai-company-search",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/ai-company-search/SKILL.md"
+  },
+  {
+    "name": "amazon-global-prices",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/amazon-global-prices/SKILL.md"
+  },
+  {
+    "name": "apple-pdf-reducto-extract",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/apple-pdf-reducto-extract/SKILL.md"
+  },
+  {
+    "name": "apple-quarterly-filings",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/apple-quarterly-filings/SKILL.md"
+  },
+  {
+    "name": "audit-shopify-store",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/audit-shopify-store/SKILL.md"
+  },
+  {
+    "name": "automate-bank-workflows",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/automate-bank-workflows/SKILL.md"
+  },
+  {
+    "name": "blackbox",
+    "description": "Delegate coding tasks to Blackbox AI CLI agent. Multi-model agent with built-in judge that runs tasks through multiple LLMs and picks the best result. Requires the blackbox CLI and a Blackbox AI API key.",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/blackbox/SKILL.md"
+  },
+  {
+    "name": "blender-mcp",
+    "description": "Control Blender directly from Hermes via socket connection to the blender-mcp addon. Create 3D objects, materials, animations, and run arbitrary Blender Python (bpy) code. Use when user wants to create or modify anything in Blender.",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/blender-mcp/SKILL.md"
+  },
+  {
+    "name": "book-electrician-service",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/book-electrician-service/SKILL.md"
+  },
+  {
+    "name": "book-newsletter-sponsorship",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/book-newsletter-sponsorship/SKILL.md"
+  },
+  {
+    "name": "browse-add-items-guest",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/browse-add-items-guest/SKILL.md"
+  },
+  {
+    "name": "browse-campsites",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/browse-campsites/SKILL.md"
+  },
+  {
+    "name": "browse-categories",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/browse-categories/SKILL.md"
+  },
+  {
+    "name": "browse-latest-models",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/browse-latest-models/SKILL.md"
+  },
+  {
+    "name": "browse-memberships",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/browse-memberships/SKILL.md"
+  },
+  {
+    "name": "browse-products",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/browse-products/SKILL.md"
+  },
+  {
+    "name": "business-search",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/business-search/SKILL.md"
+  },
+  {
+    "name": "ca-real-estate-license-verify",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/ca-real-estate-license-verify/SKILL.md"
+  },
+  {
+    "name": "calculate-net-salary",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/calculate-net-salary/SKILL.md"
+  },
+  {
+    "name": "cali-highway-traffic",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/cali-highway-traffic/SKILL.md"
+  },
+  {
+    "name": "check-availability",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/check-availability/SKILL.md"
+  },
+  {
+    "name": "check-case-status",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/check-case-status/SKILL.md"
+  },
+  {
+    "name": "check-diesel-subsidies",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/check-diesel-subsidies/SKILL.md"
+  },
+  {
+    "name": "check-interactions",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/check-interactions/SKILL.md"
+  },
+  {
+    "name": "check-refund-status",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/check-refund-status/SKILL.md"
+  },
+  {
+    "name": "check-stock",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/check-stock/SKILL.md"
+  },
+  {
+    "name": "check-vehicle-registration",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/check-vehicle-registration/SKILL.md"
+  },
+  {
+    "name": "check-wait-time",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/check-wait-time/SKILL.md"
+  },
+  {
+    "name": "chroma",
+    "description": "Open-source embedding database for AI applications. Store embeddings and metadata, perform vector and full-text search, filter by metadata. Simple 4-function API. Scales from notebooks to production clusters. Use for semantic search, RAG applications, or document retrieval. Best for local development and open-source projects.",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/chroma/SKILL.md"
+  },
+  {
+    "name": "claims-search",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/claims-search/SKILL.md"
+  },
+  {
+    "name": "inference-sh-cli",
+    "description": "Run 150+ AI apps via inference.sh CLI (infsh) \u2014 image generation, video creation, LLMs, search, 3D, social automation. Uses the terminal tool. Triggers: inference.sh, infsh, ai apps, flux, veo, image generation, video generation, seedream, seedance, tavily",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/cli/SKILL.md"
+  },
+  {
+    "name": "clip",
+    "description": "OpenAI's model connecting vision and language. Enables zero-shot image classification, image-text matching, and cross-modal retrieval. Trained on 400M image-text pairs. Use for image search, content moderation, or vision-language tasks without fine-tuning. Best for general-purpose image understanding.",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/clip/SKILL.md"
+  },
+  {
+    "name": "collect-share-event-media",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/collect-share-event-media/SKILL.md"
+  },
+  {
+    "name": "company-legal-address-finder",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/company-legal-address-finder/SKILL.md"
+  },
+  {
+    "name": "companyregistry",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/companyregistry/SKILL.md"
+  },
+  {
+    "name": "compare-credit-cards",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/compare-credit-cards/SKILL.md"
+  },
+  {
+    "name": "compare-drug-prices",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/compare-drug-prices/SKILL.md"
+  },
+  {
+    "name": "compare-flights",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/compare-flights/SKILL.md"
+  },
+  {
+    "name": "compare-insurance",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/compare-insurance/SKILL.md"
+  },
+  {
+    "name": "compare-plans",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/compare-plans/SKILL.md"
+  },
+  {
+    "name": "compare-products-by-price-rating-delivery",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/compare-products-by-price-rating-delivery/SKILL.md"
+  },
+  {
+    "name": "compare-products-instant-delivery",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/compare-products-instant-delivery/SKILL.md"
+  },
+  {
+    "name": "compare-savings-rates",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/compare-savings-rates/SKILL.md"
+  },
+  {
+    "name": "comps-analysis",
+    "description": "Build comparable company analysis in Excel \u2014 operating metrics, valuation multiples, statistical benchmarking vs peer sets. Pairs with excel-author. Use for public-company valuation, IPO pricing, sector benchmarking, or outlier detection.",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/comps-analysis/SKILL.md"
+  },
+  {
+    "name": "concept-diagrams",
+    "description": "Generate flat, minimal light/dark-aware SVG diagrams as standalone HTML files, using a unified educational visual language with 9 semantic color ramps, sentence-case typography, and automatic dark mode. Best suited for educational and non-software visuals \u2014 physics setups, chemistry mechanisms, math curves, physical objects (aircraft, turbines, smartphones, mechanical watches), anatomy, floor plans, cross-sections, narrative journeys (lifecycle of X, process of Y), hub-spoke system integrations (smart city, IoT), and exploded layer views. If a more specialized skill exists for the subject (dedicated software/cloud architecture, hand-drawn sketches, animated explainers, etc.), prefer that \u2014 otherwise this skill can also serve as a general-purpose SVG diagram fallback with a clean educational look. Ships with 15 example diagrams.",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/concept-diagrams/SKILL.md"
+  },
+  {
+    "name": "contract-opportunity-search",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/contract-opportunity-search/SKILL.md"
+  },
+  {
+    "name": "copenhagen-monocle-search",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/copenhagen-monocle-search/SKILL.md"
+  },
+  {
+    "name": "create-payment-credential",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/create-payment-credential/SKILL.md"
+  },
+  {
+    "name": "create-vegan-itinerary",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/create-vegan-itinerary/SKILL.md"
+  },
+  {
+    "name": "cross-border-trucking-quote",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/cross-border-trucking-quote/SKILL.md"
+  },
+  {
+    "name": "dcf-model",
+    "description": "Build institutional-quality DCF valuation models in Excel \u2014 revenue projections, FCF build, WACC, terminal value, Bear/Base/Bull scenarios, 5x5 sensitivity tables. Pairs with excel-author. Use for intrinsic-value equity analysis.",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/dcf-model/SKILL.md"
+  },
+  {
+    "name": "discover-industrial-opportunities",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/discover-industrial-opportunities/SKILL.md"
+  },
+  {
+    "name": "docs-vs-code-auditor",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/docs-vs-code-auditor/SKILL.md"
+  },
+  {
+    "name": "electronic-product-details",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/electronic-product-details/SKILL.md"
+  },
+  {
+    "name": "exact-spec-packaging-procurement",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/exact-spec-packaging-procurement/SKILL.md"
+  },
+  {
+    "name": "explore-pinball-content",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/explore-pinball-content/SKILL.md"
+  },
+  {
+    "name": "explore-use-cases",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/explore-use-cases/SKILL.md"
+  },
+  {
+    "name": "extract-listings",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/extract-listings/SKILL.md"
+  },
+  {
+    "name": "extract-listings-by-neighborhood",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/extract-listings-by-neighborhood/SKILL.md"
+  },
+  {
+    "name": "extract-menu",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/extract-menu/SKILL.md"
+  },
+  {
+    "name": "extract-product-offers",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/extract-product-offers/SKILL.md"
+  },
+  {
+    "name": "extract-property-data",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/extract-property-data/SKILL.md"
+  },
+  {
+    "name": "extract-reviews",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/extract-reviews/SKILL.md"
+  },
+  {
+    "name": "extract-transcript",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/extract-transcript/SKILL.md"
+  },
+  {
+    "name": "faiss",
+    "description": "Facebook's library for efficient similarity search and clustering of dense vectors. Supports billions of vectors, GPU acceleration, and various index types (Flat, IVF, HNSW). Use for fast k-NN search, large-scale vector retrieval, or when you need pure similarity search without metadata. Best for high-performance applications.",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/faiss/SKILL.md"
+  },
+  {
+    "name": "fastmcp",
+    "description": "Build, test, inspect, install, and deploy MCP servers with FastMCP in Python. Use when creating a new MCP server, wrapping an API or database as MCP tools, exposing resources or prompts, or preparing a FastMCP server for Claude Code, Cursor, or HTTP deployment.",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/fastmcp/SKILL.md"
+  },
+  {
+    "name": "fetch",
+    "description": "Public web retrieval and clean extraction engine. Use whenever the user wants to fetch, download, inspect, clean, or save content from a public URL. Supports safe fetching of public web pages, extracts title/text/links, stores results locally, and keeps a job history. No credentials, no login flows, no cloud sync.",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/fetch/SKILL.md"
+  },
+  {
+    "name": "fetch-homepage-content",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/fetch-homepage-content/SKILL.md"
+  },
+  {
+    "name": "filter-clean-label-products",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/filter-clean-label-products/SKILL.md"
+  },
+  {
+    "name": "filter-rental-search",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/filter-rental-search/SKILL.md"
+  },
+  {
+    "name": "find-a-hotel",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/find-a-hotel/SKILL.md"
+  },
+  {
+    "name": "find-a-product",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/find-a-product/SKILL.md"
+  },
+  {
+    "name": "find-agent-contact-details",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/find-agent-contact-details/SKILL.md"
+  },
+  {
+    "name": "find-agent-ready-apis",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/find-agent-ready-apis/SKILL.md"
+  },
+  {
+    "name": "find-all-products",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/find-all-products/SKILL.md"
+  },
+  {
+    "name": "find-and-add-to-cart",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/find-and-add-to-cart/SKILL.md"
+  },
+  {
+    "name": "find-appointment",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/find-appointment/SKILL.md"
+  },
+  {
+    "name": "find-book",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/find-book/SKILL.md"
+  },
+  {
+    "name": "find-california-business",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/find-california-business/SKILL.md"
+  },
+  {
+    "name": "find-charger",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/find-charger/SKILL.md"
+  },
+  {
+    "name": "find-cheapest-gas",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/find-cheapest-gas/SKILL.md"
+  },
+  {
+    "name": "find-class",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/find-class/SKILL.md"
+  },
+  {
+    "name": "find-company-filings",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/find-company-filings/SKILL.md"
+  },
+  {
+    "name": "find-craft-beer-restaurants",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/find-craft-beer-restaurants/SKILL.md"
+  },
+  {
+    "name": "find-diecast-model",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/find-diecast-model/SKILL.md"
+  },
+  {
+    "name": "find-funding",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/find-funding/SKILL.md"
+  },
+  {
+    "name": "find-latest-publications",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/find-latest-publications/SKILL.md"
+  },
+  {
+    "name": "find-listing",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/find-listing/SKILL.md"
+  },
+  {
+    "name": "find-listings",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/find-listings/SKILL.md"
+  },
+  {
+    "name": "find-market",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/find-market/SKILL.md"
+  },
+  {
+    "name": "find-opportunities",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/find-opportunities/SKILL.md"
+  },
+  {
+    "name": "find-pizza",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/find-pizza/SKILL.md"
+  },
+  {
+    "name": "find-polling-place",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/find-polling-place/SKILL.md"
+  },
+  {
+    "name": "find-product-pricing",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/find-product-pricing/SKILL.md"
+  },
+  {
+    "name": "find-repair-guides",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/find-repair-guides/SKILL.md"
+  },
+  {
+    "name": "find-sea-ranch-house",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/find-sea-ranch-house/SKILL.md"
+  },
+  {
+    "name": "find-snapshot",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/find-snapshot/SKILL.md"
+  },
+  {
+    "name": "find-specialist",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/find-specialist/SKILL.md"
+  },
+  {
+    "name": "find-starred-restaurant-check-reservation",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/find-starred-restaurant-check-reservation/SKILL.md"
+  },
+  {
+    "name": "find-suppliers",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/find-suppliers/SKILL.md"
+  },
+  {
+    "name": "find-tech-companies",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/find-tech-companies/SKILL.md"
+  },
+  {
+    "name": "find-templates",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/find-templates/SKILL.md"
+  },
+  {
+    "name": "find-ticket",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/find-ticket/SKILL.md"
+  },
+  {
+    "name": "find-trains",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/find-trains/SKILL.md"
+  },
+  {
+    "name": "find-transport-route",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/find-transport-route/SKILL.md"
+  },
+  {
+    "name": "find-violation-details",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/find-violation-details/SKILL.md"
+  },
+  {
+    "name": "find-word-meanings",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/find-word-meanings/SKILL.md"
+  },
+  {
+    "name": "find-yoga-meditation-class",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/find-yoga-meditation-class/SKILL.md"
+  },
+  {
+    "name": "firebox-gift-recommender",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/firebox-gift-recommender/SKILL.md"
+  },
+  {
+    "name": "fitness-nutrition",
+    "description": ">",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/fitness-nutrition/SKILL.md"
+  },
+  {
+    "name": "optimizing-attention-flash",
+    "description": "Optimizes transformer attention with Flash Attention for 2-4x speedup and 10-20x memory reduction. Use when training/running transformers with long sequences (>512 tokens), encountering GPU memory issues with attention, or need faster inference. Supports PyTorch native SDPA, flash-attn library, H100 FP8, and sliding window attention.",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/flash-attention/SKILL.md"
+  },
+  {
+    "name": "geo-weather-fetch",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/geo-weather-fetch/SKILL.md"
+  },
+  {
+    "name": "get-article",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/get-article/SKILL.md"
+  },
+  {
+    "name": "get-bitcoin-fees",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/get-bitcoin-fees/SKILL.md"
+  },
+  {
+    "name": "get-business-brain",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/get-business-brain/SKILL.md"
+  },
+  {
+    "name": "get-business-hours",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/get-business-hours/SKILL.md"
+  },
+  {
+    "name": "get-company-reviews",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/get-company-reviews/SKILL.md"
+  },
+  {
+    "name": "get-comparable-sales",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/get-comparable-sales/SKILL.md"
+  },
+  {
+    "name": "get-earthquake-feed",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/get-earthquake-feed/SKILL.md"
+  },
+  {
+    "name": "get-fighter-record",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/get-fighter-record/SKILL.md"
+  },
+  {
+    "name": "get-forecast",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/get-forecast/SKILL.md"
+  },
+  {
+    "name": "get-hospital-rating",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/get-hospital-rating/SKILL.md"
+  },
+  {
+    "name": "get-marketplace-price",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/get-marketplace-price/SKILL.md"
+  },
+  {
+    "name": "get-npb-game-results",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/get-npb-game-results/SKILL.md"
+  },
+  {
+    "name": "get-player-stats",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/get-player-stats/SKILL.md"
+  },
+  {
+    "name": "get-pr-review",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/get-pr-review/SKILL.md"
+  },
+  {
+    "name": "get-rating",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/get-rating/SKILL.md"
+  },
+  {
+    "name": "get-rental-car-price",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/get-rental-car-price/SKILL.md"
+  },
+  {
+    "name": "get-repo-metadata",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/get-repo-metadata/SKILL.md"
+  },
+  {
+    "name": "get-resale-price",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/get-resale-price/SKILL.md"
+  },
+  {
+    "name": "get-school-rating",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/get-school-rating/SKILL.md"
+  },
+  {
+    "name": "get-score",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/get-score/SKILL.md"
+  },
+  {
+    "name": "get-seat-map",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/get-seat-map/SKILL.md"
+  },
+  {
+    "name": "get-smb-funding",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/get-smb-funding/SKILL.md"
+  },
+  {
+    "name": "get-stories",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/get-stories/SKILL.md"
+  },
+  {
+    "name": "get-trending-content",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/get-trending-content/SKILL.md"
+  },
+  {
+    "name": "get-vehicle-value",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/get-vehicle-value/SKILL.md"
+  },
+  {
+    "name": "guidance",
+    "description": "Control LLM output with regex and grammars, guarantee valid JSON/XML/code generation, enforce structured formats, and build multi-step workflows with Guidance - Microsoft Research's constrained generation framework",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/guidance/SKILL.md"
+  },
+  {
+    "name": "homepage-news-trends-weather",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/homepage-news-trends-weather/SKILL.md"
+  },
+  {
+    "name": "honcho",
+    "description": "Configure and use Honcho memory with Hermes -- cross-session user modeling, multi-profile peer isolation, observation config, dialectic reasoning, session summaries, and context budget enforcement. Use when setting up Honcho, troubleshooting memory, managing profiles with Honcho peers, or tuning observation, recall, and dialectic settings.",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/honcho/SKILL.md"
+  },
+  {
+    "name": "huggingface-tokenizers",
+    "description": "Fast tokenizers optimized for research and production. Rust-based implementation tokenizes 1GB in <20 seconds. Supports BPE, WordPiece, and Unigram algorithms. Train custom vocabularies, track alignments, handle padding/truncation. Integrates seamlessly with transformers. Use when you need high-performance tokenization or custom tokenizer training.",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/huggingface-tokenizers/SKILL.md"
+  },
+  {
+    "name": "hyperliquid",
+    "description": "Hyperliquid market data, account history, trade review.",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/hyperliquid/SKILL.md"
+  },
+  {
+    "name": "instructor",
+    "description": "Extract structured data from LLM responses with Pydantic validation, retry failed extractions automatically, parse complex JSON with type safety, and stream partial results with Instructor - battle-tested structured output library",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/instructor/SKILL.md"
+  },
+  {
+    "name": "is-it-cloudy",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/is-it-cloudy/SKILL.md"
+  },
+  {
+    "name": "jp-restaurant-search",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/jp-restaurant-search/SKILL.md"
+  },
+  {
+    "name": "kanban-video-orchestrator",
+    "description": "Plan, set up, and monitor a multi-agent video production pipeline backed by Hermes Kanban. Use when the user wants to make ANY video \u2014 narrative film, product/marketing, music video, explainer, ASCII/terminal art, abstract/generative loop, comic, 3D, real-time/installation \u2014 and the work warrants decomposition into specialized profiles (writer, designer, animator, renderer, voice, editor, etc.) coordinated through a kanban board. Performs adaptive discovery to scope the brief, designs an appropriate team for the requested style, generates the setup script that creates Hermes profiles + initial kanban task, then helps monitor execution and intervene when tasks stall or fail. Routes scenes to whichever Hermes rendering / audio / design skill fits each beat (`ascii-video`, `manim-video`, `p5js`, `comfyui`, `touchdesigner-mcp`, `blender-mcp`, `pixel-art`, `baoyu-comic`, `claude-design`, `excalidraw`, `songsee`, `heartmula`, \u2026) plus external APIs for TTS, image-gen, and image-to-video as needed.",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/kanban-video-orchestrator/SKILL.md"
+  },
+  {
+    "name": "lambda-labs-gpu-cloud",
+    "description": "Reserved and on-demand GPU cloud instances for ML training and inference. Use when you need dedicated GPU instances with simple SSH access, persistent filesystems, or high-performance multi-node clusters for large-scale training.",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/lambda-labs/SKILL.md"
+  },
+  {
+    "name": "lbo-model",
+    "description": "Build leveraged buyout models in Excel \u2014 sources & uses, debt schedule, cash sweep, exit multiple, IRR/MOIC sensitivity. Pairs with excel-author. Use for PE screening, sponsor-case valuation, or illustrative LBO in a pitch.",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/lbo-model/SKILL.md"
+  },
+  {
+    "name": "list-properties",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/list-properties/SKILL.md"
+  },
+  {
+    "name": "list-tours",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/list-tours/SKILL.md"
+  },
+  {
+    "name": "llava",
+    "description": "Large Language and Vision Assistant. Enables visual instruction tuning and image-based conversations. Combines CLIP vision encoder with Vicuna/LLaMA language models. Supports multi-turn image chat, visual question answering, and instruction following. Use for vision-language chatbots or image understanding tasks. Best for conversational image analysis.",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/llava/SKILL.md"
+  },
+  {
+    "name": "login",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/login/SKILL.md"
+  },
+  {
+    "name": "lookup-aircraft",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/lookup-aircraft/SKILL.md"
+  },
+  {
+    "name": "lookup-patent",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/lookup-patent/SKILL.md"
+  },
+  {
+    "name": "lookup-scout-docs",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/lookup-scout-docs/SKILL.md"
+  },
+  {
+    "name": "lookup-scout-product-info",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/lookup-scout-product-info/SKILL.md"
+  },
+  {
+    "name": "lookup-software",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/lookup-software/SKILL.md"
+  },
+  {
+    "name": "lookup-trust-posture",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/lookup-trust-posture/SKILL.md"
+  },
+  {
+    "name": "manage-candidate-profile",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/manage-candidate-profile/SKILL.md"
+  },
+  {
+    "name": "mcporter",
+    "description": "Use the mcporter CLI to list, configure, auth, and call MCP servers/tools directly (HTTP or stdio), including ad-hoc servers, config edits, and CLI/type generation.",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/mcporter/SKILL.md"
+  },
+  {
+    "name": "meme-generation",
+    "description": "Generate real meme images by picking a template and overlaying text with Pillow. Produces actual .png meme files.",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/meme-generation/SKILL.md"
+  },
+  {
+    "name": "merger-model",
+    "description": "Build accretion/dilution (merger) models in Excel \u2014 pro-forma P&L, synergies, financing mix, EPS impact. Pairs with excel-author. Use for M&A pitches, board materials, or deal evaluation.",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/merger-model/SKILL.md"
+  },
+  {
+    "name": "modal-serverless-gpu",
+    "description": "Serverless GPU cloud platform for running ML workloads. Use when you need on-demand GPU access without infrastructure management, deploying ML models as APIs, or running batch jobs with automatic scaling.",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/modal/SKILL.md"
+  },
+  {
+    "name": "moneymaxx",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/moneymaxx/SKILL.md"
+  },
+  {
+    "name": "nemo-curator",
+    "description": "GPU-accelerated data curation for LLM training. Supports text/image/video/audio. Features fuzzy deduplication (16\u00d7 faster), quality filtering (30+ heuristics), semantic deduplication, PII redaction, NSFW detection. Scales across GPUs with RAPIDS. Use for preparing high-quality training datasets, cleaning web data, or deduplicating large corpora.",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/nemo-curator/SKILL.md"
+  },
+  {
+    "name": "neuroskill-bci",
+    "description": ">",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/neuroskill-bci/SKILL.md"
+  },
+  {
+    "name": "news-homepage",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/news-homepage/SKILL.md"
+  },
+  {
+    "name": "nurse-license-verify",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/nurse-license-verify/SKILL.md"
+  },
+  {
+    "name": "obsessions",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/obsessions/SKILL.md"
+  },
+  {
+    "name": "one-three-one-rule",
+    "description": ">",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/one-three-one-rule/SKILL.md"
+  },
+  {
+    "name": "openclaw-migration",
+    "description": "Migrate a user's OpenClaw customization footprint into Hermes Agent. Imports Hermes-compatible memories, SOUL.md, command allowlists, user skills, and selected workspace assets from ~/.openclaw, then reports exactly what could not be migrated and why.",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/openclaw-migration/SKILL.md"
+  },
+  {
+    "name": "order-for-pickup",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/order-for-pickup/SKILL.md"
+  },
+  {
+    "name": "outlines",
+    "description": "Outlines: structured JSON/regex/Pydantic LLM generation.",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/outlines/SKILL.md"
+  },
+  {
+    "name": "peft-fine-tuning",
+    "description": "Parameter-efficient fine-tuning for LLMs using LoRA, QLoRA, and 25+ methods. Use when fine-tuning large models (7B-70B) with limited GPU memory, when you need to train <1% of parameters with minimal accuracy loss, or for multi-adapter serving. HuggingFace's official library integrated with transformers ecosystem.",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/peft/SKILL.md"
+  },
+  {
+    "name": "peptide-research",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/peptide-research/SKILL.md"
+  },
+  {
+    "name": "philly-council-events",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/philly-council-events/SKILL.md"
+  },
+  {
+    "name": "pinecone",
+    "description": "Managed vector database for production AI applications. Fully managed, auto-scaling, with hybrid search (dense + sparse), metadata filtering, and namespaces. Low latency (<100ms p95). Use for production RAG, recommendation systems, or semantic search at scale. Best for serverless, managed infrastructure.",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/pinecone/SKILL.md"
+  },
+  {
+    "name": "pinggy-tunnel",
+    "description": "Zero-install localhost tunnels over SSH via Pinggy.",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/pinggy-tunnel/SKILL.md"
+  },
+  {
+    "name": "place-order",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/place-order/SKILL.md"
+  },
+  {
+    "name": "plan-route",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/plan-route/SKILL.md"
+  },
+  {
+    "name": "polymarket-research",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/polymarket-research/SKILL.md"
+  },
+  {
+    "name": "post-bounty",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/post-bounty/SKILL.md"
+  },
+  {
+    "name": "private-market-verified-search",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/private-market-verified-search/SKILL.md"
+  },
+  {
+    "name": "provider-search",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/provider-search/SKILL.md"
+  },
+  {
+    "name": "pytorch-fsdp",
+    "description": "Expert guidance for Fully Sharded Data Parallel training with PyTorch FSDP - parameter sharding, mixed precision, CPU offloading, FSDP2",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/pytorch-fsdp/SKILL.md"
+  },
+  {
+    "name": "pytorch-lightning",
+    "description": "High-level PyTorch framework with Trainer class, automatic distributed training (DDP/FSDP/DeepSpeed), callbacks system, and minimal boilerplate. Scales from laptop to supercomputer with same code. Use when you want clean training loops with built-in best practices.",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/pytorch-lightning/SKILL.md"
+  },
+  {
+    "name": "qdrant-vector-search",
+    "description": "High-performance vector similarity search engine for RAG and semantic search. Use when building production RAG systems requiring fast nearest neighbor search, hybrid search with filtering, or scalable vector storage with Rust-powered performance.",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/qdrant/SKILL.md"
+  },
+  {
+    "name": "query-extract-structure-datasets",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/query-extract-structure-datasets/SKILL.md"
+  },
+  {
+    "name": "query-menu-data",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/query-menu-data/SKILL.md"
+  },
+  {
+    "name": "query-product",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/query-product/SKILL.md"
+  },
+  {
+    "name": "read-player-stats",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/read-player-stats/SKILL.md"
+  },
+  {
+    "name": "recipe-discovery-generator",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/recipe-discovery-generator/SKILL.md"
+  },
+  {
+    "name": "recruiting-jobs-search",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/recruiting-jobs-search/SKILL.md"
+  },
+  {
+    "name": "retrieve-latest-dts",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/retrieve-latest-dts/SKILL.md"
+  },
+  {
+    "name": "ruwangi-parfum-perempuan",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/ruwangi-parfum-perempuan/SKILL.md"
+  },
+  {
+    "name": "sparse-autoencoder-training",
+    "description": "Provides guidance for training and analyzing Sparse Autoencoders (SAEs) using SAELens to decompose neural network activations into interpretable features. Use when discovering interpretable features, analyzing superposition, or studying monosemantic representations in language models.",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/saelens/SKILL.md"
+  },
+  {
+    "name": "scrape-all-data",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/scrape-all-data/SKILL.md"
+  },
+  {
+    "name": "scrape-exhibitor-directory",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/scrape-exhibitor-directory/SKILL.md"
+  },
+  {
+    "name": "search-articles",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-articles/SKILL.md"
+  },
+  {
+    "name": "search-auctions",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-auctions/SKILL.md"
+  },
+  {
+    "name": "search-by-jurisdiction",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-by-jurisdiction/SKILL.md"
+  },
+  {
+    "name": "search-california-state-jobs",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-california-state-jobs/SKILL.md"
+  },
+  {
+    "name": "search-car-rental",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-car-rental/SKILL.md"
+  },
+  {
+    "name": "search-cars-by-filters",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-cars-by-filters/SKILL.md"
+  },
+  {
+    "name": "search-cases",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-cases/SKILL.md"
+  },
+  {
+    "name": "search-cheapest-flight",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-cheapest-flight/SKILL.md"
+  },
+  {
+    "name": "search-christian-products",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-christian-products/SKILL.md"
+  },
+  {
+    "name": "search-codex-pets",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-codex-pets/SKILL.md"
+  },
+  {
+    "name": "search-compare-monitor",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-compare-monitor/SKILL.md"
+  },
+  {
+    "name": "search-computer-parts",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-computer-parts/SKILL.md"
+  },
+  {
+    "name": "search-cottages",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-cottages/SKILL.md"
+  },
+  {
+    "name": "search-csfa",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-csfa/SKILL.md"
+  },
+  {
+    "name": "search-edgar-fulltext",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-edgar-fulltext/SKILL.md"
+  },
+  {
+    "name": "search-events",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-events/SKILL.md"
+  },
+  {
+    "name": "search-financial-news",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-financial-news/SKILL.md"
+  },
+  {
+    "name": "search-flights",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-flights/SKILL.md"
+  },
+  {
+    "name": "search-image",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-image/SKILL.md"
+  },
+  {
+    "name": "search-investment-projects",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-investment-projects/SKILL.md"
+  },
+  {
+    "name": "search-jobs",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-jobs/SKILL.md"
+  },
+  {
+    "name": "search-listings",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-listings/SKILL.md"
+  },
+  {
+    "name": "search-long-term-rentals",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-long-term-rentals/SKILL.md"
+  },
+  {
+    "name": "search-marketplace",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-marketplace/SKILL.md"
+  },
+  {
+    "name": "search-meetings-providers-by-zip",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-meetings-providers-by-zip/SKILL.md"
+  },
+  {
+    "name": "search-metrics-tokens-nfts",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-metrics-tokens-nfts/SKILL.md"
+  },
+  {
+    "name": "search-newsletters",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-newsletters/SKILL.md"
+  },
+  {
+    "name": "search-patents",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-patents/SKILL.md"
+  },
+  {
+    "name": "search-pets",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-pets/SKILL.md"
+  },
+  {
+    "name": "search-product",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-product/SKILL.md"
+  },
+  {
+    "name": "search-products",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-products/SKILL.md"
+  },
+  {
+    "name": "search-recent-jobs",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-recent-jobs/SKILL.md"
+  },
+  {
+    "name": "search-recipes",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-recipes/SKILL.md"
+  },
+  {
+    "name": "search-recipes-by-diet",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-recipes-by-diet/SKILL.md"
+  },
+  {
+    "name": "search-rentals",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-rentals/SKILL.md"
+  },
+  {
+    "name": "search-repair-guides",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-repair-guides/SKILL.md"
+  },
+  {
+    "name": "search-restaurants",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-restaurants/SKILL.md"
+  },
+  {
+    "name": "search-routes",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-routes/SKILL.md"
+  },
+  {
+    "name": "search-shoes",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-shoes/SKILL.md"
+  },
+  {
+    "name": "search-skills-plugins-subagents",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-skills-plugins-subagents/SKILL.md"
+  },
+  {
+    "name": "search-specialty-coffee",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-specialty-coffee/SKILL.md"
+  },
+  {
+    "name": "search-startup-jobs",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-startup-jobs/SKILL.md"
+  },
+  {
+    "name": "search-stock-news",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-stock-news/SKILL.md"
+  },
+  {
+    "name": "search-tennis-utr",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-tennis-utr/SKILL.md"
+  },
+  {
+    "name": "search-tickets",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-tickets/SKILL.md"
+  },
+  {
+    "name": "search-trails",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-trails/SKILL.md"
+  },
+  {
+    "name": "search-vegan",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-vegan/SKILL.md"
+  },
+  {
+    "name": "search-wholesale",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/search-wholesale/SKILL.md"
+  },
+  {
+    "name": "sf-business-registry-lookup",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/sf-business-registry-lookup/SKILL.md"
+  },
+  {
+    "name": "sf-court-booking",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/sf-court-booking/SKILL.md"
+  },
+  {
+    "name": "simpo-training",
+    "description": "Simple Preference Optimization for LLM alignment. Reference-free alternative to DPO with better performance (+6.4 points on AlpacaEval 2.0). No reference model needed, more efficient than DPO. Use for preference alignment when want simpler, faster training than DPO/PPO.",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/simpo/SKILL.md"
+  },
+  {
+    "name": "solana",
+    "description": "Query Solana blockchain data with USD pricing \u2014 wallet balances, token portfolios with values, transaction details, NFTs, whale detection, and live network stats. Uses Solana RPC + CoinGecko. No API key required.",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/solana/SKILL.md"
+  },
+  {
+    "name": "sparql-query",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/sparql-query/SKILL.md"
+  },
+  {
+    "name": "stocks",
+    "description": "Stock quotes, history, search, compare, crypto via Yahoo.",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/stocks/SKILL.md"
+  },
+  {
+    "name": "top-market-beaters",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/top-market-beaters/SKILL.md"
+  },
+  {
+    "name": "track-flight",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/track-flight/SKILL.md"
+  },
+  {
+    "name": "track-live-scores",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/track-live-scores/SKILL.md"
+  },
+  {
+    "name": "track-package",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/track-package/SKILL.md"
+  },
+  {
+    "name": "track-shipment",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/track-shipment/SKILL.md"
+  },
+  {
+    "name": "travel-deal",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/travel-deal/SKILL.md"
+  },
+  {
+    "name": "trending-repos-search",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/trending-repos-search/SKILL.md"
+  },
+  {
+    "name": "trending-world-news",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/trending-world-news/SKILL.md"
+  },
+  {
+    "name": "verify-accountant",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/verify-accountant/SKILL.md"
+  },
+  {
+    "name": "verify-heading",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/verify-heading/SKILL.md"
+  },
+  {
+    "name": "view-rates-apply-mortgage",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/view-rates-apply-mortgage/SKILL.md"
+  },
+  {
+    "name": "watchers",
+    "description": "Poll RSS, JSON APIs, and GitHub with watermark dedup.",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/watchers/SKILL.md"
+  },
+  {
+    "name": "write-prompt",
+    "description": ">-",
+    "category": "browse-sh",
+    "path": "/root/.hermes/skills/browse-sh/write-prompt/SKILL.md"
+  },
+  {
+    "name": "architecture-diagram",
+    "description": "Dark-themed SVG architecture/cloud/infra diagrams as HTML.",
+    "category": "creative",
+    "path": "/root/.hermes/skills/creative/architecture-diagram/SKILL.md"
+  },
+  {
+    "name": "ascii-art",
+    "description": "ASCII art: pyfiglet, cowsay, boxes, image-to-ascii.",
+    "category": "creative",
+    "path": "/root/.hermes/skills/creative/ascii-art/SKILL.md"
+  },
+  {
+    "name": "ascii-video",
+    "description": "ASCII video: convert video/audio to colored ASCII MP4/GIF.",
+    "category": "creative",
+    "path": "/root/.hermes/skills/creative/ascii-video/SKILL.md"
+  },
+  {
+    "name": "baoyu-article-illustrator",
+    "description": "Article illustrations: type \u00d7 style \u00d7 palette consistency.",
+    "category": "creative",
+    "path": "/root/.hermes/skills/creative/baoyu-article-illustrator/SKILL.md"
+  },
+  {
+    "name": "baoyu-comic",
+    "description": "Knowledge comics (\u77e5\u8bc6\u6f2b\u753b): educational, biography, tutorial.",
+    "category": "creative",
+    "path": "/root/.hermes/skills/creative/baoyu-comic/SKILL.md"
+  },
+  {
+    "name": "baoyu-infographic",
+    "description": "Infographics: 21 layouts x 21 styles (\u4fe1\u606f\u56fe, \u53ef\u89c6\u5316).",
+    "category": "creative",
+    "path": "/root/.hermes/skills/creative/baoyu-infographic/SKILL.md"
+  },
+  {
+    "name": "claude-design",
+    "description": "Design one-off HTML artifacts (landing, deck, prototype).",
+    "category": "creative",
+    "path": "/root/.hermes/skills/creative/claude-design/SKILL.md"
+  },
+  {
+    "name": "comfyui",
+    "description": "Generate images, video, and audio with ComfyUI \u2014 install, launch, manage nodes/models, run workflows with parameter injection. Uses the official comfy-cli for lifecycle and direct REST/WebSocket API for execution.",
+    "category": "creative",
+    "path": "/root/.hermes/skills/creative/comfyui/SKILL.md"
+  },
+  {
+    "name": "ideation",
+    "description": "Generate project ideas via creative constraints.",
+    "category": "creative",
+    "path": "/root/.hermes/skills/creative/creative-ideation/SKILL.md"
+  },
+  {
+    "name": "design-md",
+    "description": "Author/validate/export Google's DESIGN.md token spec files.",
+    "category": "creative",
+    "path": "/root/.hermes/skills/creative/design-md/SKILL.md"
+  },
+  {
+    "name": "excalidraw",
+    "description": "Hand-drawn Excalidraw JSON diagrams (arch, flow, seq).",
+    "category": "creative",
+    "path": "/root/.hermes/skills/creative/excalidraw/SKILL.md"
+  },
+  {
+    "name": "humanizer",
+    "description": "Humanize text: strip AI-isms and add real voice.",
+    "category": "creative",
+    "path": "/root/.hermes/skills/creative/humanizer/SKILL.md"
+  },
+  {
+    "name": "hyperframes",
+    "description": "Create HTML-based video compositions, animated title cards, social overlays, captioned talking-head videos, audio-reactive visuals, and shader transitions using HyperFrames. HTML is the source of truth for video. Use when the user wants a rendered MP4/WebM from an HTML composition, wants to animate text/logos/charts over media, needs captions synced to audio, wants TTS narration, or wants to convert a website into a video.",
+    "category": "creative",
+    "path": "/root/.hermes/skills/creative/hyperframes/SKILL.md"
+  },
+  {
+    "name": "manim-video",
+    "description": "Manim CE animations: 3Blue1Brown math/algo videos.",
+    "category": "creative",
+    "path": "/root/.hermes/skills/creative/manim-video/SKILL.md"
+  },
+  {
+    "name": "p5js",
+    "description": "p5.js sketches: gen art, shaders, interactive, 3D.",
+    "category": "creative",
+    "path": "/root/.hermes/skills/creative/p5js/SKILL.md"
+  },
+  {
+    "name": "pixel-art",
+    "description": "Pixel art w/ era palettes (NES, Game Boy, PICO-8).",
+    "category": "creative",
+    "path": "/root/.hermes/skills/creative/pixel-art/SKILL.md"
+  },
+  {
+    "name": "popular-web-designs",
+    "description": "54 real design systems (Stripe, Linear, Vercel) as HTML/CSS.",
+    "category": "creative",
+    "path": "/root/.hermes/skills/creative/popular-web-designs/SKILL.md"
+  },
+  {
+    "name": "pretext",
+    "description": "Use when building creative browser demos with @chenglou/pretext \u2014 DOM-free text layout for ASCII art, typographic flow around obstacles, text-as-geometry games, kinetic typography, and text-powered generative art. Produces single-file HTML demos by default.",
+    "category": "creative",
+    "path": "/root/.hermes/skills/creative/pretext/SKILL.md"
+  },
+  {
+    "name": "sketch",
+    "description": "Throwaway HTML mockups: 2-3 design variants to compare.",
+    "category": "creative",
+    "path": "/root/.hermes/skills/creative/sketch/SKILL.md"
+  },
+  {
+    "name": "songwriting-and-ai-music",
+    "description": "Songwriting craft and Suno AI music prompts.",
+    "category": "creative",
+    "path": "/root/.hermes/skills/creative/songwriting-and-ai-music/SKILL.md"
+  },
+  {
+    "name": "touchdesigner-mcp",
+    "description": "Control a running TouchDesigner instance via twozero MCP \u2014 create operators, set parameters, wire connections, execute Python, build real-time visuals. 36 native tools.",
+    "category": "creative",
+    "path": "/root/.hermes/skills/creative/touchdesigner-mcp/SKILL.md"
+  },
+  {
+    "name": "jupyter-live-kernel",
+    "description": "Iterative Python via live Jupyter kernel (hamelnb).",
+    "category": "data-science",
+    "path": "/root/.hermes/skills/data-science/jupyter-live-kernel/SKILL.md"
+  },
+  {
+    "name": "design-shotgun",
+    "description": "|",
+    "category": "general",
+    "path": "/root/.hermes/skills/design-shotgun/SKILL.md"
+  },
+  {
+    "name": "docker-management",
+    "description": "Manage Docker containers, images, volumes, networks, and Compose stacks \u2014 lifecycle ops, debugging, cleanup, and Dockerfile optimization.",
+    "category": "devops",
+    "path": "/root/.hermes/skills/devops/docker-management/SKILL.md"
+  },
+  {
+    "name": "hermes-operations",
+    "description": "Hermes Agent infrastructure operations \u2014 crash recovery, post-update diagnosis, DB file management, memory pressure triage, and gateway lifecycle management.",
+    "category": "devops",
+    "path": "/root/.hermes/skills/devops/hermes-operations/SKILL.md"
+  },
+  {
+    "name": "hermes-performance-optimization",
+    "description": "Optimize Hermes Agent performance \u2014 pipeline analysis, token reduction, JIT skill delivery, config tuning, and benchmarking. Use when the user asks about making Hermes faster, cheaper, more responsive, or when investigating where latency/token spend goes.",
+    "category": "devops",
+    "path": "/root/.hermes/skills/devops/hermes-performance-optimization/SKILL.md"
+  },
+  {
+    "name": "kanban-orchestrator",
+    "description": "Decomposition playbook + anti-temptation rules for an orchestrator profile routing work through Kanban. The \"don't do the work yourself\" rule and the basic lifecycle are auto-injected into every kanban worker's system prompt; this skill is the deeper playbook when you're specifically playing the orchestrator role.",
+    "category": "devops",
+    "path": "/root/.hermes/skills/devops/kanban-orchestrator/SKILL.md"
+  },
+  {
+    "name": "kanban-worker",
+    "description": "Pitfalls, examples, and edge cases for Hermes Kanban workers. The lifecycle itself is auto-injected into every worker's system prompt as KANBAN_GUIDANCE (from agent/prompt_builder.py); this skill is what you load when you want deeper detail on specific scenarios.",
+    "category": "devops",
+    "path": "/root/.hermes/skills/devops/kanban-worker/SKILL.md"
+  },
+  {
+    "name": "litellm-proxy-debug",
+    "description": "Debug, fix, and restart the LiteLLM proxy server on AlmaLinux 9",
+    "category": "devops",
+    "path": "/root/.hermes/skills/devops/litellm-proxy-debug/SKILL.md"
+  },
+  {
+    "name": "local-dev-preview",
+    "description": "Spin up a local dev server for any web project, verify it's running, and provide a preview URL to the user (typically via Tailscale).",
+    "category": "devops",
+    "path": "/root/.hermes/skills/devops/local-dev-preview/SKILL.md"
+  },
+  {
+    "name": "supabase-operations",
+    "description": "Direct Supabase database access without the JS client \u2014 PostgREST REST API patterns, auth, and common operations. Use when node_modules are not installed locally, the Supabase JS client is unavailable, or you need to script DB operations from Python.",
+    "category": "devops",
+    "path": "/root/.hermes/skills/devops/supabase-operations/SKILL.md"
+  },
+  {
+    "name": "webhook-subscriptions",
+    "description": "Webhook subscriptions: event-driven agent runs.",
+    "category": "devops",
+    "path": "/root/.hermes/skills/devops/webhook-subscriptions/SKILL.md"
+  },
+  {
+    "name": "dogfood",
+    "description": "Exploratory QA of web apps: find bugs, evidence, reports.",
+    "category": "general",
+    "path": "/root/.hermes/skills/dogfood/SKILL.md"
+  },
+  {
+    "name": "adversarial-ux-test",
+    "description": "Roleplay the most difficult, tech-resistant user for your product. Browse the app as that persona, find every UX pain point, then filter complaints through a pragmatism layer to separate real problems from noise. Creates actionable tickets from genuine issues only.",
+    "category": "dogfood",
+    "path": "/root/.hermes/skills/dogfood/adversarial-ux-test/SKILL.md"
+  },
+  {
+    "name": "himalaya",
+    "description": "Himalaya CLI: IMAP/SMTP email from terminal.",
+    "category": "email",
+    "path": "/root/.hermes/skills/email/himalaya/SKILL.md"
+  },
+  {
+    "name": "excel-author",
+    "description": "Build auditable Excel workbooks headless with openpyxl \u2014 blue/black/green cell conventions, formulas over hardcodes, named ranges, balance checks, sensitivity tables. Use for financial models, audit outputs, reconciliations.",
+    "category": "finance",
+    "path": "/root/.hermes/skills/finance/excel-author/SKILL.md"
+  },
+  {
+    "name": "pptx-author",
+    "description": "Build PowerPoint decks headless with python-pptx. Pairs with excel-author for model-backed decks where every number traces to a workbook cell. Use for pitch decks, IC memos, earnings notes.",
+    "category": "finance",
+    "path": "/root/.hermes/skills/finance/pptx-author/SKILL.md"
+  },
+  {
+    "name": "frontend-design",
+    "description": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples include websites, landing pages, dashboards, React components, HTML/CSS layouts, or when styling/beautifying any web UI). Generates creative, polished code and UI design that avoids generic AI aesthetics.",
+    "category": "general",
+    "path": "/root/.hermes/skills/frontend-design/SKILL.md"
+  },
+  {
+    "name": "minecraft-modpack-server",
+    "description": "Host modded Minecraft servers (CurseForge, Modrinth).",
+    "category": "gaming",
+    "path": "/root/.hermes/skills/gaming/minecraft-modpack-server/SKILL.md"
+  },
+  {
+    "name": "pokemon-player",
+    "description": "Play Pokemon via headless emulator + RAM reads.",
+    "category": "gaming",
+    "path": "/root/.hermes/skills/gaming/pokemon-player/SKILL.md"
+  },
+  {
+    "name": "codebase-inspection",
+    "description": "Inspect codebases w/ pygount: LOC, languages, ratios.",
+    "category": "github",
+    "path": "/root/.hermes/skills/github/codebase-inspection/SKILL.md"
+  },
+  {
+    "name": "github-auth",
+    "description": "GitHub auth setup: HTTPS tokens, SSH keys, gh CLI login.",
+    "category": "github",
+    "path": "/root/.hermes/skills/github/github-auth/SKILL.md"
+  },
+  {
+    "name": "github-cli-setup",
+    "description": "Install GitHub CLI (`gh`) on RHEL/AlmaLinux and authenticate with a PAT from .env.",
+    "category": "github",
+    "path": "/root/.hermes/skills/github/github-cli-setup/SKILL.md"
+  },
+  {
+    "name": "github-code-review",
+    "description": "Review PRs: diffs, inline comments via gh or REST.",
+    "category": "github",
+    "path": "/root/.hermes/skills/github/github-code-review/SKILL.md"
+  },
+  {
+    "name": "github-issues",
+    "description": "Create, triage, label, assign GitHub issues via gh or REST.",
+    "category": "github",
+    "path": "/root/.hermes/skills/github/github-issues/SKILL.md"
+  },
+  {
+    "name": "github-pr-workflow",
+    "description": "GitHub PR lifecycle: branch, commit, open, CI, merge.",
+    "category": "github",
+    "path": "/root/.hermes/skills/github/github-pr-workflow/SKILL.md"
+  },
+  {
+    "name": "github-repo-management",
+    "description": "Clone/create/fork repos; manage remotes, releases.",
+    "category": "github",
+    "path": "/root/.hermes/skills/github/github-repo-management/SKILL.md"
+  },
+  {
+    "name": "jit-skills",
+    "description": "JIT skill delivery via semantic embeddings \u2014 find relevant skills on-demand instead of loading all 123+ into the system prompt. Saves ~4,000 tokens/session. Includes plugin, embedding index, source patches, re-apply script, and cron integration.",
+    "category": "general",
+    "path": "/root/.hermes/skills/jit-skills/SKILL.md"
+  },
+  {
+    "name": "native-mcp",
+    "description": "MCP client: connect servers, register tools (stdio/HTTP).",
+    "category": "mcp",
+    "path": "/root/.hermes/skills/mcp/native-mcp/SKILL.md"
+  },
+  {
+    "name": "gif-search",
+    "description": "Search/download GIFs from Tenor via curl + jq.",
+    "category": "media",
+    "path": "/root/.hermes/skills/media/gif-search/SKILL.md"
+  },
+  {
+    "name": "heartmula",
+    "description": "HeartMuLa: Suno-like song generation from lyrics + tags.",
+    "category": "media",
+    "path": "/root/.hermes/skills/media/heartmula/SKILL.md"
+  },
+  {
+    "name": "songsee",
+    "description": "Audio spectrograms/features (mel, chroma, MFCC) via CLI.",
+    "category": "media",
+    "path": "/root/.hermes/skills/media/songsee/SKILL.md"
+  },
+  {
+    "name": "spotify",
+    "description": "Spotify: play, search, queue, manage playlists and devices.",
+    "category": "media",
+    "path": "/root/.hermes/skills/media/spotify/SKILL.md"
+  },
+  {
+    "name": "youtube-content",
+    "description": "YouTube transcripts to summaries, threads, blogs.",
+    "category": "media",
+    "path": "/root/.hermes/skills/media/youtube-content/SKILL.md"
+  },
+  {
+    "name": "evaluating-llms-harness",
+    "description": "lm-eval-harness: benchmark LLMs (MMLU, GSM8K, etc.).",
+    "category": "evaluation",
+    "path": "/root/.hermes/skills/mlops/evaluation/lm-evaluation-harness/SKILL.md"
+  },
+  {
+    "name": "weights-and-biases",
+    "description": "W&B: log ML experiments, sweeps, model registry, dashboards.",
+    "category": "evaluation",
+    "path": "/root/.hermes/skills/mlops/evaluation/weights-and-biases/SKILL.md"
+  },
+  {
+    "name": "gbrain-operations",
+    "description": "GBrain configuration, maintenance, and provider setup \u2014 embedding models, AI gateway, search modes, migrations.",
+    "category": "mlops",
+    "path": "/root/.hermes/skills/mlops/gbrain-operations/SKILL.md"
+  },
+  {
+    "name": "huggingface-hub",
+    "description": "HuggingFace hf CLI: search/download/upload models, datasets.",
+    "category": "mlops",
+    "path": "/root/.hermes/skills/mlops/huggingface-hub/SKILL.md"
+  },
+  {
+    "name": "llama-cpp",
+    "description": "llama.cpp local GGUF inference + HF Hub model discovery.",
+    "category": "inference",
+    "path": "/root/.hermes/skills/mlops/inference/llama-cpp/SKILL.md"
+  },
+  {
+    "name": "obliteratus",
+    "description": "OBLITERATUS: abliterate LLM refusals (diff-in-means).",
+    "category": "inference",
+    "path": "/root/.hermes/skills/mlops/inference/obliteratus/SKILL.md"
+  },
+  {
+    "name": "serving-llms-vllm",
+    "description": "vLLM: high-throughput LLM serving, OpenAI API, quantization.",
+    "category": "inference",
+    "path": "/root/.hermes/skills/mlops/inference/vllm/SKILL.md"
+  },
+  {
+    "name": "audiocraft-audio-generation",
+    "description": "AudioCraft: MusicGen text-to-music, AudioGen text-to-sound.",
+    "category": "models",
+    "path": "/root/.hermes/skills/mlops/models/audiocraft/SKILL.md"
+  },
+  {
+    "name": "segment-anything-model",
+    "description": "SAM: zero-shot image segmentation via points, boxes, masks.",
+    "category": "models",
+    "path": "/root/.hermes/skills/mlops/models/segment-anything/SKILL.md"
+  },
+  {
+    "name": "dspy",
+    "description": "DSPy: declarative LM programs, auto-optimize prompts, RAG.",
+    "category": "research",
+    "path": "/root/.hermes/skills/mlops/research/dspy/SKILL.md"
+  },
+  {
+    "name": "obsidian",
+    "description": "Read, search, create, and edit notes in the Obsidian vault.",
+    "category": "note-taking",
+    "path": "/root/.hermes/skills/note-taking/obsidian/SKILL.md"
+  },
+  {
+    "name": "office-hours",
+    "description": "|",
+    "category": "general",
+    "path": "/root/.hermes/skills/office-hours/SKILL.md"
+  },
+  {
+    "name": "airtable",
+    "description": "Airtable REST API via curl. Records CRUD, filters, upserts.",
+    "category": "productivity",
+    "path": "/root/.hermes/skills/productivity/airtable/SKILL.md"
+  },
+  {
+    "name": "google-workspace",
+    "description": "Google OAuth2 client credentials (downloaded from Google Cloud Console)",
+    "category": "productivity",
+    "path": "/root/.hermes/skills/productivity/google-workspace/SKILL.md"
+  },
+  {
+    "name": "linear",
+    "description": "Linear: manage issues, projects, teams via GraphQL + curl.",
+    "category": "productivity",
+    "path": "/root/.hermes/skills/productivity/linear/SKILL.md"
+  },
+  {
+    "name": "maps",
+    "description": "Geocode, POIs, routes, timezones via OpenStreetMap/OSRM.",
+    "category": "productivity",
+    "path": "/root/.hermes/skills/productivity/maps/SKILL.md"
+  },
+  {
+    "name": "nano-pdf",
+    "description": "Edit PDF text/typos/titles via nano-pdf CLI (NL prompts).",
+    "category": "productivity",
+    "path": "/root/.hermes/skills/productivity/nano-pdf/SKILL.md"
+  },
+  {
+    "name": "notion",
+    "description": "Notion API + ntn CLI: pages, databases, markdown, Workers.",
+    "category": "productivity",
+    "path": "/root/.hermes/skills/productivity/notion/SKILL.md"
+  },
+  {
+    "name": "ocr-and-documents",
+    "description": "Extract text from PDFs/scans (pymupdf, marker-pdf).",
+    "category": "productivity",
+    "path": "/root/.hermes/skills/productivity/ocr-and-documents/SKILL.md"
+  },
+  {
+    "name": "powerpoint",
+    "description": "Create, read, edit .pptx decks, slides, notes, templates.",
+    "category": "productivity",
+    "path": "/root/.hermes/skills/productivity/powerpoint/SKILL.md"
+  },
+  {
+    "name": "teams-meeting-pipeline",
+    "description": "Operate the Teams meeting summary pipeline via Hermes CLI \u2014 summarize meetings, inspect pipeline status, replay jobs, manage Microsoft Graph subscriptions.",
+    "category": "productivity",
+    "path": "/root/.hermes/skills/productivity/teams-meeting-pipeline/SKILL.md"
+  },
+  {
+    "name": "godmode",
+    "description": "Jailbreak LLMs: Parseltongue, GODMODE, ULTRAPLINIAN.",
+    "category": "red-teaming",
+    "path": "/root/.hermes/skills/red-teaming/godmode/SKILL.md"
+  },
+  {
+    "name": "arxiv",
+    "description": "Search arXiv papers by keyword, author, category, or ID.",
+    "category": "research",
+    "path": "/root/.hermes/skills/research/arxiv/SKILL.md"
+  },
+  {
+    "name": "blogwatcher",
+    "description": "Monitor blogs and RSS/Atom feeds via blogwatcher-cli tool.",
+    "category": "research",
+    "path": "/root/.hermes/skills/research/blogwatcher/SKILL.md"
+  },
+  {
+    "name": "codebase-research",
+    "description": "Deep-dive open-source codebases to extract strategic, product, or business insights for non-technical stakeholders. Transform technical architecture into actionable recommendations.",
+    "category": "research",
+    "path": "/root/.hermes/skills/research/codebase-research/SKILL.md"
+  },
+  {
+    "name": "domain-intel",
+    "description": "Passive domain reconnaissance using Python stdlib. Subdomain discovery, SSL certificate inspection, WHOIS lookups, DNS records, domain availability checks, and bulk multi-domain analysis. No API keys required.",
+    "category": "research",
+    "path": "/root/.hermes/skills/research/domain-intel/SKILL.md"
+  },
+  {
+    "name": "duckduckgo-search",
+    "description": "Free web search via DuckDuckGo \u2014 text, news, images, videos. No API key needed. Prefer the `ddgs` CLI when installed; use the Python DDGS library only after verifying that `ddgs` is available in the current runtime.",
+    "category": "research",
+    "path": "/root/.hermes/skills/research/duckduckgo-search/SKILL.md"
+  },
+  {
+    "name": "exa",
+    "description": "|",
+    "category": "research",
+    "path": "/root/.hermes/skills/research/exa/SKILL.md"
+  },
+  {
+    "name": "firecrawl",
+    "description": "|",
+    "category": "research",
+    "path": "/root/.hermes/skills/research/firecrawl/SKILL.md"
+  },
+  {
+    "name": "llm-wiki",
+    "description": "Karpathy's LLM Wiki: build/query interlinked markdown KB.",
+    "category": "research",
+    "path": "/root/.hermes/skills/research/llm-wiki/SKILL.md"
+  },
+  {
+    "name": "parallel-cli",
+    "description": "Optional vendor skill for Parallel CLI \u2014 agent-native web search, extraction, deep research, enrichment, FindAll, and monitoring. Prefer JSON output and non-interactive flows.",
+    "category": "research",
+    "path": "/root/.hermes/skills/research/parallel-cli/SKILL.md"
+  },
+  {
+    "name": "polymarket",
+    "description": "Query Polymarket: markets, prices, orderbooks, history.",
+    "category": "research",
+    "path": "/root/.hermes/skills/research/polymarket/SKILL.md"
+  },
+  {
+    "name": "research-paper-writing",
+    "description": "Write ML papers for NeurIPS/ICML/ICLR: design\u2192submit.",
+    "category": "research",
+    "path": "/root/.hermes/skills/research/research-paper-writing/SKILL.md"
+  },
+  {
+    "name": "scrapling",
+    "description": "Web scraping with Scrapling - HTTP fetching, stealth browser automation, Cloudflare bypass, and spider crawling via CLI and Python.",
+    "category": "research",
+    "path": "/root/.hermes/skills/research/scrapling/SKILL.md"
+  },
+  {
+    "name": "seo-strategy",
+    "description": "Write SEO/GEO optimization strategy plans for websites \u2014 map authoritative frameworks (Google's GEO guide, etc.) to a specific business, audit current state, and produce prioritized action items.",
+    "category": "research",
+    "path": "/root/.hermes/skills/research/seo-strategy/SKILL.md"
+  },
+  {
+    "name": "web-monitoring",
+    "description": "Set up recurring scrapers that track structured page data over time \u2014 fetch, snapshot, diff, report. Use when the user wants daily change reports from a web page that updates on a schedule.",
+    "category": "research",
+    "path": "/root/.hermes/skills/research/web-monitoring/SKILL.md"
+  },
+  {
+    "name": "1password",
+    "description": "Set up and use 1Password CLI (op). Use when installing the CLI, enabling desktop app integration, signing in, and reading/injecting secrets for commands.",
+    "category": "security",
+    "path": "/root/.hermes/skills/security/1password/SKILL.md"
+  },
+  {
+    "name": "sherlock",
+    "description": "OSINT username search across 400+ social networks. Hunt down social media accounts by username.",
+    "category": "security",
+    "path": "/root/.hermes/skills/security/sherlock/SKILL.md"
+  },
+  {
+    "name": "openhue",
+    "description": "Control Philips Hue lights, scenes, rooms via OpenHue CLI.",
+    "category": "smart-home",
+    "path": "/root/.hermes/skills/smart-home/openhue/SKILL.md"
+  },
+  {
+    "name": "xdk-twitter",
+    "description": "Post, search, read, and interact with X (Twitter) via the xdk-twitter Hermes plugin. Multi-account support with OAuth 1.0a.",
+    "category": "social-media",
+    "path": "/root/.hermes/skills/social-media/xdk-twitter/SKILL.md"
+  },
+  {
+    "name": "xurl",
+    "description": "X/Twitter via xurl CLI: post, search, DM, media, v2 API.",
+    "category": "social-media",
+    "path": "/root/.hermes/skills/social-media/xurl/SKILL.md"
+  },
+  {
+    "name": "debugging-hermes-tui-commands",
+    "description": "Debug Hermes TUI slash commands: Python, gateway, Ink UI.",
+    "category": "software-development",
+    "path": "/root/.hermes/skills/software-development/debugging-hermes-tui-commands/SKILL.md"
+  },
+  {
+    "name": "hermes-agent-skill-authoring",
+    "description": "Author in-repo SKILL.md: frontmatter, validator, structure.",
+    "category": "software-development",
+    "path": "/root/.hermes/skills/software-development/hermes-agent-skill-authoring/SKILL.md"
+  },
+  {
+    "name": "hermes-plugin-authoring",
+    "description": "Author Hermes Agent plugins \u2014 plugin.yaml manifest, register(ctx) entry point, hook registration, testing patterns, and skill discovery. Use when building, debugging, or extending a Hermes plugin.",
+    "category": "software-development",
+    "path": "/root/.hermes/skills/software-development/hermes-plugin-authoring/SKILL.md"
+  },
+  {
+    "name": "merge-conflict-resolution",
+    "description": "Resolve git merge conflicts systematically \u2014 read all conflicted files first, categorize conflicts, use checkout --theirs/--ours for simple cases and patch for manual merges. Covers verification, build-testing, and common pitfalls (async-in-callback, OAuth PKCE origins).",
+    "category": "software-development",
+    "path": "/root/.hermes/skills/software-development/merge-conflict-resolution/SKILL.md"
+  },
+  {
+    "name": "nextjs-pages-blog",
+    "description": "Add a markdown-based blog to a Next.js Pages Router project (gray-matter + remark, SSG). Use when the user wants to add blog infrastructure to an existing Next.js site that uses the Pages Router.",
+    "category": "software-development",
+    "path": "/root/.hermes/skills/software-development/nextjs-pages-blog/SKILL.md"
+  },
+  {
+    "name": "node-inspect-debugger",
+    "description": "Debug Node.js via --inspect + Chrome DevTools Protocol CLI.",
+    "category": "software-development",
+    "path": "/root/.hermes/skills/software-development/node-inspect-debugger/SKILL.md"
+  },
+  {
+    "name": "plan",
+    "description": "Plan mode: write markdown plan to .hermes/plans/, no exec.",
+    "category": "software-development",
+    "path": "/root/.hermes/skills/software-development/plan/SKILL.md"
+  },
+  {
+    "name": "python-debugpy",
+    "description": "Debug Python: pdb REPL + debugpy remote (DAP).",
+    "category": "software-development",
+    "path": "/root/.hermes/skills/software-development/python-debugpy/SKILL.md"
+  },
+  {
+    "name": "requesting-code-review",
+    "description": "Pre-commit review: security scan, quality gates, auto-fix.",
+    "category": "software-development",
+    "path": "/root/.hermes/skills/software-development/requesting-code-review/SKILL.md"
+  },
+  {
+    "name": "rest-graphql-debug",
+    "description": "Debug REST/GraphQL APIs: status codes, auth, schemas, repro.",
+    "category": "software-development",
+    "path": "/root/.hermes/skills/software-development/rest-graphql-debug/SKILL.md"
+  },
+  {
+    "name": "spike",
+    "description": "Throwaway experiments to validate an idea before build.",
+    "category": "software-development",
+    "path": "/root/.hermes/skills/software-development/spike/SKILL.md"
+  },
+  {
+    "name": "subagent-driven-development",
+    "description": "Execute plans via delegate_task subagents (2-stage review).",
+    "category": "software-development",
+    "path": "/root/.hermes/skills/software-development/subagent-driven-development/SKILL.md"
+  },
+  {
+    "name": "systematic-debugging",
+    "description": "4-phase root cause debugging: understand bugs before fixing.",
+    "category": "software-development",
+    "path": "/root/.hermes/skills/software-development/systematic-debugging/SKILL.md"
+  },
+  {
+    "name": "test-driven-development",
+    "description": "TDD: enforce RED-GREEN-REFACTOR, tests before code.",
+    "category": "software-development",
+    "path": "/root/.hermes/skills/software-development/test-driven-development/SKILL.md"
+  },
+  {
+    "name": "tr-content-generation",
+    "description": "Generate and polish TR (The Reincarnation) guild ranking blog content \u2014 titles, excerpts, and HTML posts from scrape data.",
+    "category": "software-development",
+    "path": "/root/.hermes/skills/software-development/tr-content-generation/SKILL.md"
+  },
+  {
+    "name": "writing-plans",
+    "description": "Write implementation plans: bite-sized tasks, paths, code.",
+    "category": "software-development",
+    "path": "/root/.hermes/skills/software-development/writing-plans/SKILL.md"
+  },
+  {
+    "name": "webapp-testing",
+    "description": "Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing browser logs.",
+    "category": "general",
+    "path": "/root/.hermes/skills/webapp-testing/SKILL.md"
+  },
+  {
+    "name": "yuanbao",
+    "description": "Yuanbao (\u5143\u5b9d) groups: @mention users, query info/members.",
+    "category": "general",
+    "path": "/root/.hermes/skills/yuanbao/SKILL.md"
+  }
+]
