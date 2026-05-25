@@ -4,6 +4,6 @@ description: "Semantic skill pre-loading — embeds user queries against a skill
 author: Ryan Underdown
 kind: standalone
 provides_hooks:
-  - pre_llm_call
+  - pre_gateway_dispatch
 provides_tools:
   - search_skills

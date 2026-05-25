@@ -10,11 +10,11 @@ Semantic skill pre-loading for Hermes Agent. Embeds user queries against a skill
 
 | Feature | jit-skills (v1) | semantic-skills (v2) |
 |---------|----------------|---------------------|
-| Skill delivery | Agent calls search_skills tool → tool response | Pre-loaded via pre_llm_call hook → injected into user message |
+| Skill delivery | Agent calls search_skills tool → tool response | Pre-loaded via pre_gateway_dispatch hook → message rewritten |
 | search_skills tool | Required for every task | Downgraded to fallback (additional lookups) |
 | First-turn tool call | Always (1,500-3,000 tokens) | Eliminated |
 | System prompt | 226 tokens, cache-friendly | 226 tokens, cache-friendly (unchanged) |
-| Injection point | Tool result in messages array | User message context (pre_llm_call) |
+| Injection point | Tool result in messages array | Gateway-level message rewrite (before agent dispatch) |
 
 ## How it works
 

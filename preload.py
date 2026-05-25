@@ -1,52 +1,69 @@
-"""Semantic skill pre-loading hook for Hermes Agent.
+"""Semantic skill pre-loading hook — gateway dispatch level.
 
-This hook fires before every LLM call. It embeds the user's message
-against the semantic skill index and injects the top-match skill content
-into the user message as ephemeral context.
+This hook fires at the gateway layer via ``pre_gateway_dispatch``, before
+the message reaches the agent loop. It embeds the incoming message against
+the semantic skill index and rewrites the message text to include the
+top-match skill content at the beginning.
 
-Key constraint: The skill content is injected into the USER MESSAGE (via
-pre_llm_call's context injection), NOT the system prompt. This keeps the
-system prompt fully stable and cache-friendly — exactly the pattern that
-maximizes exact-prefix prompt caching across turns.
+Key advantages over ``pre_llm_call``:
+- Fires earlier — before auth, agent wake-up, and tool schema loading
+- Skill content becomes part of the raw user message from the start
+- System prompt is never touched — perfect exact-prefix caching
+- Works at the gateway level, so it applies to ALL platforms uniformly
 """
 
 from __future__ import annotations
 
 import time
 from pathlib import Path
-from typing import Optional
+from typing import Any, Dict, Optional
 
 _PLUGIN_DIR = Path(__file__).resolve().parent
 _SCORE_THRESHOLD = 0.30  # Minimum cosine similarity to pre-load a skill
-_SESSION_CACHE: dict[str, str] = {}  # session_id → last injected skill name
+_SESSION_CACHE: Dict[str, str] = {}  # session_key → last injected skill name
 
 
-def on_pre_llm_call(
-    session_id: str = "",
-    user_message: str = "",
-    is_first_turn: bool = False,
+def on_pre_gateway_dispatch(
+    event: Any = None,
+    gateway: Any = None,
+    session_store: Any = None,
     **kwargs,
-) -> Optional[dict]:
-    """Pre-load the best-matching skill into the user message.
+) -> Optional[Dict[str, str]]:
+    """Pre-load the best-matching skill by rewriting the incoming message.
 
-    On the first turn of a session (or when the user's query changes
-    meaningfully), embed the query against the skill index, find the top
-    match, and inject its content as ephemeral context.
+    Called by the Hermes gateway for every incoming user message before
+    auth, pairing, or agent dispatch.  Returns a dict influencing flow:
 
-    Returns:
-        dict with "context" key containing the skill content, or None
-        if no good match found or backend unavailable.
+        {\"action\": \"rewrite\", \"text\": \"[skill]\\n\\n[msg]\"}  — inject skill
+        None                                           — normal dispatch
+
+    Args:
+        event: ``MessageEvent`` with ``.text`` (str) and ``.source``.
+        gateway: ``GatewayRunner`` instance (unused by this hook).
+        session_store: Session store (unused by this hook).
     """
-    if not user_message.strip():
+    if event is None:
         return None
 
-    # Quick early exit: skip short queries that can't meaningfully embed
-    if len(user_message.split()) < 3:
+    text = getattr(event, "text", "") or ""
+    if not text.strip():
         return None
+
+    # Quick early exit: skip very short queries
+    if len(text.split()) < 3:
+        return None
+
+    # Derive a stable session key from the event source so we can
+    # avoid re-injecting the same skill on follow-up turns.
+    source = getattr(event, "source", None)
+    session_key = (
+        getattr(source, "chat_id", None)
+        or getattr(source, "user_id", None)
+        or "default"
+    )
 
     try:
-        # Lazy-import embedding_store to avoid loading numpy on every
-        # Hermes startup — it only loads when the hook first fires.
+        # Lazy-import embedding_store — defers NumPy until first use.
         import importlib.util
 
         spec = importlib.util.spec_from_file_location(
@@ -55,7 +72,6 @@ def on_pre_llm_call(
         store = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(store)
 
-        # Load index or bail
         if not store.index_exists():
             return None
 
@@ -65,17 +81,17 @@ def on_pre_llm_call(
 
         metadata, embeddings = index_data
 
-        # Embed the query
+        # Embed the incoming message
         backend = store._get_backend()
         try:
-            query_embedding = store.embed_text(user_message, backend=backend)
+            query_embedding = store.embed_text(text, backend=backend)
         except Exception:
             try:
-                query_embedding = store.embed_text(user_message, backend="keyword")
+                query_embedding = store.embed_text(text, backend="keyword")
             except Exception:
                 return None
 
-        # Rank by cosine similarity
+        # Rank by cosine similarity — find the single best match
         best_score = -1.0
         best_meta = None
 
@@ -90,30 +106,31 @@ def on_pre_llm_call(
         if best_score < _SCORE_THRESHOLD or best_meta is None:
             return None
 
-        # Read the full skill content
+        # Read full skill content
         skill_content = store.read_skill_content(best_meta["path"])
         if not skill_content:
             return None
 
         # Avoid re-injecting the same skill on follow-up turns
-        if session_id and _SESSION_CACHE.get(session_id) == best_meta["name"]:
+        if _SESSION_CACHE.get(session_key) == best_meta["name"]:
             return None
 
-        if session_id:
-            _SESSION_CACHE[session_id] = best_meta["name"]
+        _SESSION_CACHE[session_key] = best_meta["name"]
 
-        # Build the context block
-        context = (
+        # Build the rewritten message — skill content goes first,
+        # then the original user message on the next line.
+        rewritten = (
             f"Relevant skill (pre-loaded, score {best_score:.2f}): {best_meta['name']}\n"
             f"{'─' * 60}\n"
             f"{skill_content}\n"
             f"{'─' * 60}\n\n"
             f"If this skill is insufficient, call search_skills for additional matches.\n\n"
             f"{'─' * 40}\n\n"
+            f"{text}"
         )
 
-        return {"context": context}
+        return {"action": "rewrite", "text": rewritten}
 
     except Exception:
-        # Graceful degradation — never block the LLM call
+        # Graceful degradation — never block message dispatch
         return None
